@@ -209,6 +209,76 @@ const tasks = `
             "answer2": { "result": false, "value": "Рим" },
             "answer3": { "result": false, "value": "Майкоп" },
             "answer4": { "result": false, "value": "Тбилиси" }
+        },
+        {
+            "question": "Где находится Северный полюс холода?",
+            "answer1": { "result": true, "value": "Оймякон" },
+            "answer2": { "result": false, "value": "Мирный" },
+            "answer3": { "result": false, "value": "Якутск" },
+            "answer4": { "result": false, "value": "Тикси" }
+        },
+        {
+            "question": "В какой стране установлена теократическая монархия?",
+            "answer1": { "result": true, "value": "Ватикан" },
+            "answer2": { "result": false, "value": "ОАЭ" },
+            "answer3": { "result": false, "value": "Иран" },
+            "answer4": { "result": false, "value": "Израиль" }
+        },
+        {
+            "question": "Какое озеро самое большое?",
+            "answer1": { "result": true, "value": "Каспийское море" },
+            "answer2": { "result": false, "value": "Байкал" },
+            "answer3": { "result": false, "value": "Виктория" },
+            "answer4": { "result": false, "value": "Мертвое море" }
+        },
+        {
+            "question": "Где расположен Бенилюкс?",
+            "answer1": { "result": true, "value": "Западная Европа" },
+            "answer2": { "result": false, "value": "Южная Европа" },
+            "answer3": { "result": false, "value": "Восточная Азия" },
+            "answer4": { "result": false, "value": "Северная Африка" }
+        },
+        {
+            "question": "Какой залив самый большой?",
+            "answer1": { "result": true, "value": "Бенгальский" },
+            "answer2": { "result": false, "value": "Гудзонов" },
+            "answer3": { "result": false, "value": "Мексиканский" },
+            "answer4": { "result": false, "value": "Бискайский" }
+        },
+        {
+            "question": "Какое море самое чистое?",
+            "answer1": { "result": true, "value": "Море Уэддела" },
+            "answer2": { "result": false, "value": "Море Сулу" },
+            "answer3": { "result": false, "value": "Море Бофорта" },
+            "answer4": { "result": false, "value": "Море Фиджи" }
+        },
+        {
+            "question": "Какое озеро является высохшим?",
+            "answer1": { "result": true, "value": "Аральское море" },
+            "answer2": { "result": false, "value": "Мертвое море" },
+            "answer3": { "result": false, "value": "Нипигон" },
+            "answer4": { "result": false, "value": "Дунтинху" }
+        },
+        {
+            "question": "Какая территория является самой загрязненной?",
+            "answer1": { "result": true, "value": "Агбогблоши" },
+            "answer2": { "result": false, "value": "Норильск" },
+            "answer3": { "result": false, "value": "Чернобыль" },
+            "answer4": { "result": false, "value": "Кабва" }
+        },
+        {
+            "question": "В какой стране больше всего городов?",
+            "answer1": { "result": true, "value": "Индия" },
+            "answer2": { "result": false, "value": "США" },
+            "answer3": { "result": false, "value": "Китай" },
+            "answer4": { "result": false, "value": "Япония" }
+        },
+        {
+            "question": "Где находится самый маленький город?",
+            "answer1": { "result": true, "value": "Хорватия" },
+            "answer2": { "result": false, "value": "Дания" },
+            "answer3": { "result": false, "value": "Зимбабве" },
+            "answer4": { "result": false, "value": "Монако" }
         }
     ]
 `;
