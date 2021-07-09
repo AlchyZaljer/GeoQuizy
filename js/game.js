@@ -134,12 +134,12 @@ geoQuizy = {
         // вывод сообщения о выигрыше/проигрыше игрока
         if (result === 'lose') {
             this.gameStatusField.innerText = `Проигрыш`;
+
         }
         if (result === 'won') {
             // добавление последнего верного ответа в счетчик
             this.gameAnswersCounter.innerText = `${this.playerResults}/${this.needRightAnswers}`;
 
-            quikEndFlag = 1;
             this.gameStatusField.innerText = `Победа!!`;
         }
 
@@ -151,6 +151,9 @@ geoQuizy = {
 
         // обнуление счетчика состояния
         this.state = 0;
+
+        // обнуление количества верных ответов
+        this.playerResults = 0;
     },
 
     // таймер
@@ -172,7 +175,6 @@ geoQuizy = {
                 )
             } else {
                 this.finish('lose');
-                quikEndFlag = 1;
             }
         }
     },

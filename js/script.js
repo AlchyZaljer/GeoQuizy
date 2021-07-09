@@ -1,6 +1,3 @@
-// инициализация флага для быстрого выхода из игры
-let quikEndFlag = 0;
-
 //действие по кнопке "Начать игру"
 document.querySelector('#startBtn').addEventListener('click', (event) => {
 
@@ -48,15 +45,8 @@ document.querySelector('#startBtn').addEventListener('click', (event) => {
 
 // действие по кнопке "Конец игры"
 document.querySelector('#endBtn').addEventListener('click', (event) => {
-    // вывод сообщения перед выходом из игры
-    if (quikEndFlag == 1) {
-        geoQuizy.finish('won');
-        quikEndFlag = 0;
-        gameEnd();
-    } else {
-        geoQuizy.finish();        
-        setTimeout(gameEnd, 2000);
-    }
+    geoQuizy.finish();  
+    gameEnd();      
 
     // смена интерфейса игры на стартовое меню
     function gameEnd() {
