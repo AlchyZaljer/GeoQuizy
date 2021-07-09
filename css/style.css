@@ -1,0 +1,140 @@
+html {
+    min-height: 100%;
+}
+
+body {
+    width: 100%;
+    font-family: 'Share Tech Mono', monospace;
+    background: #040231;
+    color: white;
+}
+
+.container {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.unseen {
+    display: none;
+}
+
+img {
+    width: 50vh;
+}
+
+#gameSettingsField {
+    margin-top: 2vh;
+    text-transform: uppercase;
+    font-size: 4vh;
+    padding: 1vh; 
+    color: #782a1e;
+    margin-bottom: 3vh;
+}
+
+#timeToggleLable, #timeToggleField, 
+#answersToggleLable, #answersToggleField {
+    font-size: 3vh;
+    padding: 1vh; 
+    color: #0064ff;
+}
+
+#timeToggleField, #answersToggleField,
+#gameStatusField, #startBtn {
+    border: 5px #0064ff solid;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.answersToggle {
+    margin-top: 3vh;
+}
+
+optgroup {
+    font-size: 2vh;
+}
+
+#startTimer {
+    padding-top: 35vh;
+}
+
+#gameStatusField, #startBtn {
+    background-color: inherit;
+    color: white;
+    font-size: 3vh;
+    text-transform: uppercase;
+}
+
+#startBtn {
+    margin-bottom: 15vh;
+    width: 40vh;
+}
+
+#startBtn:hover {
+    background: #0066ffc0;
+}
+
+#endBtn:hover {
+    background: #782a1ec0;
+    color: white;
+}
+
+#endBtn {
+    background: inherit;
+    border: 5px #782a1e solid;
+    border-radius: 30px;
+    color: #782a1e;
+    text-transform: uppercase;
+}
+
+#timerField, #startTimer {
+    background: inherit;
+    color: #782a1e;
+    font-size: 4vh;
+    text-align: center;
+    user-select: none;
+}
+
+#gameAnswersCounter {
+    font-size: 4vh;
+    text-align: center;
+}
+
+#questionField {  
+    background: inherit;  
+    font-size: 4vh;
+    padding: 2vh 1vw 2vh 1vw; 
+    text-align: center;
+    border: 5px #0064ff solid;
+    border-radius: 50px;
+}
+
+.answer {
+    font-size: 3vh;
+    padding-bottom: 5vh;
+    padding-left: 4vw;
+    vertical-align: middle;
+    text-align: center;
+    background: inherit;
+    border: 5px #0064ff solid;
+    border-radius: 50px;
+}
+
+.row-tb {
+    margin-top: 2vh;
+    margin-bottom: 25vh;
+}
+
+.row-3b {
+    margin-bottom: 3vh;
+}
+
+.row-2b {
+    margin-bottom: 2vh;
+}
+
+footer {
+    font-family: 'Share Tech Mono', monospace;
+    position: absolute;
+    bottom: 1vh;
+    width: 100%;
+}

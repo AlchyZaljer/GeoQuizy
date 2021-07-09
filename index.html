@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GeoQuizy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-lg-8 offset-lg-2">
+                <!-- стартовое меню -->
+                <div class="settings">
+
+                    <!-- лого игры -->
+                    <div class="row">
+                        <div class="col-12" id="logo">
+                            <img class="img-fluid mx-auto d-block" src="img/logo.png" alt="Logo">
+                        </div>
+                    </div>
+
+                    <!-- кнопка старта -->
+                    <div class="row">
+                        <div class="col-12">
+                            <button id="startBtn" class="btn btn-lg btn-primary mx-auto btn-block">
+                                Начать игру</button>
+                        </div>
+                    </div>
+
+                    <!-- настройки -->
+                    <div class="row-3b row">
+                        <div class="col-12">
+                            <span class="alert settingsField" id="gameSettingsField">&lt;Настройки&gt;</span>
+                        </div>
+                    </div>
+
+                    <!-- выбор времени -->
+                    <div class="row timeToggle">
+                        <div class="col-2">
+                            <label id="timeToggleLable" for="timeToggleField">Таймер:</label>
+                        </div>
+                        <!-- поле ввода времени -->
+                        <div class="col-1">
+                            <select class="form-select" size="1" id="timeToggleField">
+                                <optgroup label="easy">
+                                    <option value="01:00">01:00</option>
+                                    <option value="00:50">00:50</option>
+                                </optgroup>
+                                <optgroup label="normal">
+                                    <option value="00:40">00:40</option>
+                                    <option value="00:30" id="selectedTime" selected>00:30</option>
+                                </optgroup>
+                                <optgroup label="hard">
+                                    <option value="00:20">00:20</option>
+                                    <option value="00:10">00:10</option>
+                                </optgroup>
+                                <optgroup label="crazy">
+                                    <option value="00:05">00:05</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- выбор количества верных ответов -->
+                    <div class="row answersToggle">
+                        <div class="col-6">
+                            <label id="answersToggleLable" for="answersToggleField">
+                                Выберите количество верных ответов:</label>
+                        </div>
+                        <!-- поле ввода количества верных ответов -->
+                        <div class="col-1">
+                            <select class="form-select" size="1" id="answersToggleField">
+                                <optgroup label="easy">
+                                    <option value="3" id="selectedAnswer" selected>3</option>
+                                    <option value="5">5</option>
+                                </optgroup>
+                                <optgroup label="normal">
+                                    <option value="10">10</option>
+                                    <option value="15">15</option>
+                                </optgroup>
+                                <optgroup label="hard">
+                                    <option value="20">20</option>
+                                    <option value="25">25</option>
+                                </optgroup>
+                                <optgroup label="crazy">
+                                    <option value="30">30</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- стартовый таймер -->
+                <div class="row">
+                    <div class="col">
+                        <div class="timer-output unseen" id="startTimer"></div>
+                    </div>
+                </div>
+
+                <!-- игровой интерфейс -->
+                <div class="game unseen">
+                    <div class="row-tb row">
+                        <div class="col-9">
+                            <!-- строка состояния -->
+                            <div class="row">
+                                <span class="alert statusField" id="gameStatusField">
+                                </span>
+                            </div>
+                            <!-- кнопка конца игры -->
+                            <div class="row">
+                                <button class="btn btn-primary" id="endBtn">Конец игры</button>
+                            </div>
+                        </div>
+
+                        <div class="offset-1 col-2">
+                            <!-- игровой таймер -->
+                            <div class="row timer-output-wrapper">
+                                <div class="timer-output" id="timerField"></div>
+                            </div>
+
+                            <!-- счетчик ответов -->
+                            <div class="row content-center">
+                                <span class="alert AnswersCounter" id="gameAnswersCounter">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- область задания -->
+                    <div class="quiz unseen">
+                        <!-- поле вопроса -->
+                        <div class="row-3b row">
+                            <div class="col">
+                                <h3 id="questionField"></h3>
+                            </div>
+                        </div>
+
+                        <!-- поля ответов -->
+                        <div class="row-2b row">
+                            <div class="col-6">
+                                <span id="answer1" class="btn btn-primary form-control text-left answer">
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <span id="answer2" class="btn btn-primary form-control text-left answer">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row-2b row">
+                            <div class="col-6">
+                                <span id="answer3" class="btn btn-primary form-control text-left answer">
+                                </span>
+                            </div>
+                            <div class="col-6">
+                                <span id="answer4" class="btn btn-primary form-control text-left answer">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/gameTasks.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+<footer>
+    <!-- Подпись -->
+    <div class="row-5 row">
+        <div class="offset-sm-9 col-2">
+            <span id="name" class="text-right">GeoQuizy&trade;</span>
+        </div>
+    </div>
+</footer>
+
+</html>
