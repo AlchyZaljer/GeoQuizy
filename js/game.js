@@ -128,7 +128,8 @@ geoQuizy = {
     // генерация окна с итогами игры
     finish(result = 'lose') {
 
-        // визуальное обнуление таймера
+        // остановка таймера
+        clearTimeout(this.timerId);
         this.timerField.innerText = '00:00';
 
         // вывод сообщения о выигрыше/проигрыше игрока
@@ -143,8 +144,18 @@ geoQuizy = {
             this.gameStatusField.innerText = `Победа!!`;
         }
 
-        // перезагрузка страницы
-        location.reload();
+        // скрытие области задания
+        if (document.querySelector('.quiz').classList.contains('unseen')) {
+        } else {
+            document.querySelector('.quiz').classList.toggle('unseen');
+        }
+
+        setTimeout(gameEnd, 2000); // задержка выхода
+
+        // обновление
+        function gameEnd() {
+            location.reload();
+        };
     },
 
     // таймер
