@@ -143,17 +143,8 @@ geoQuizy = {
             this.gameStatusField.innerText = `Победа!!`;
         }
 
-        // скрытие области задания
-        if (document.querySelector('.quiz').classList.contains('unseen')) {
-        } else {
-            document.querySelector('.quiz').classList.toggle('unseen');
-        }
-
-        // обнуление счетчика состояния
-        this.state = 0;
-
-        // обнуление количества верных ответов
-        this.playerResults = 0;
+        // перезагрузка страницы
+        location.reload();
     },
 
     // таймер
