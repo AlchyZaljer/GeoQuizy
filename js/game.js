@@ -134,14 +134,18 @@ geoQuizy = {
 
         // вывод сообщения о выигрыше/проигрыше игрока
         if (result === 'lose') {
+            document.querySelector('#endBtn').disabled = true; 
+
             this.gameStatusField.innerText = `Проигрыш`;
 
         }
         if (result === 'won') {
+            document.querySelector('#endBtn').disabled = true;
+            
             // добавление последнего верного ответа в счетчик
             this.gameAnswersCounter.innerText = `${this.playerResults}/${this.needRightAnswers}`;
 
-            this.gameStatusField.innerText = `Победа!!`;
+            this.gameStatusField.innerText = `Победа!!`; 
         }
 
         // скрытие области задания

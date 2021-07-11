@@ -46,13 +46,6 @@ document.querySelector('#startBtn').addEventListener('click', (event) => {
 // действие по кнопке "Конец игры"
 document.querySelector('#endBtn').addEventListener('click', (event) => {
     geoQuizy.finish(); 
-    
-    setTimeout(gameEnd, 2000); // задержка выхода
-
-    // смена интерфейса игры на стартовое меню
-    function gameEnd() {
-        location.reload();
-    };
 })
 
 // запуск игры
